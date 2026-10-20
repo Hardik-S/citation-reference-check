@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "citation-reference-check"
+version = "0.1.0"
+description = "Offline exact-membership audit for declared citation references"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+citation-reference-check = "citation_reference_check.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
